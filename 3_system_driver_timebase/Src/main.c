@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include "stm32f7xx.h"
+#include "fpu.h"
+#include "uart.h"
+#include "timebase.h"
+
+
+int main(void)
+{
+
+	fpu_enable();
+	debug_uart_init();
+
+	timebase_init();
+
+	while (1)
+    {
+		printf("Staring up ...\r\n");
+
+		delay(1);
+    }
+}
